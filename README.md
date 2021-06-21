@@ -54,7 +54,7 @@ Step by step procedure
 
 Explore Data (Training and Test)
 
-Exploratory data analysis is an approach of analysing data sets to summarize their main characteristics, often using statistical graphics and other data visualization methods. It is a critical process of performing initial investigations on data so as to discover patterns, to spot anomalies, to test hypothesis and to check assumptions with the help of summary statistics and graphical representations. The major processes that we do in the EDA are:
+Exploratory data analysis is an approach of analysing data sets to summarize their main characteristics, often using statistical graphics and other data visualization methods. It is the critical process of performing initial investigations on data so as to discover patterns, spot anomalies, test hypothesis and to check assumptions with the help of summary statistics and graphical representations. The major processes in EDA are:
 
     1. Handling Missing values
     2. Removing duplicates
@@ -76,7 +76,7 @@ Outliers, being the most extreme observations, may include the sample maximum or
 
 Using box and whiskers chart (boxplot) we can show the outlier in the data set.
 
-If the outlier is present in the data, then we can,
+If there are outliers in the data, they can be dealt with using any of the methods such as:
 
     1. Drop the outlier value
     2. Replace the outlier value using the __IQR__(Interquartile Range)
@@ -84,10 +84,13 @@ If the outlier is present in the data, then we can,
 
 Before the normalising split the data into numerical distribution data set using select_dtypes(). Then verify the skewness. The primary reason of the skew is that analysis based on normal distributions incorrectly estimates expected returns and risk. Skewness is a measure of symmetry, or more precisely, the lack of symmetry. A distribution, or data set, is symmetric if it looks the same to the left and right of the center point.
 
-Kurtosis is a measure of whether the data are heavy-tailed or light-tailed relative to a normal distribution. That is, data sets with high kurtosis tend to have heavy tails, or outliers. Data sets with low kurtosis tend to have light tails, or lack of outliers. A uniform distribution would be the extreme case. The histogram is an effective graphical technique for showing both the skewness and kurtosis of data set. Data scaling is a recommended pre-processing step when working with data. Data scaling can be achieved by normalizing or standardizing real-valued input and output variables. 
+Kurtosis is a measure of whether the data is heavy-tailed or light-tailed relative to a normal distribution. That is, data sets with high kurtosis tend to have heavy tails, or outliers. Data sets with low kurtosis tend to have light tails, or lack of outliers. 
 
-Next step is to build the models using LGBM (Light Gradient Boosted Machine) and XG boost. For that Initially we need to do the parameter tuning using RandomizedSearchCV or GridSearchCV.
+The histogram is an effective graphical technique for showing both the skewness and kurtosis of data set. Data scaling is a recommended pre-processing step when working with data. Data scaling can be achieved by normalizing or standardizing real-valued input and output variables. 
 
-The performance of the models is measured using AUC-ROC
-AUC_ROC means The Receiver Operator Characteristic (ROC) curve is an evaluation metric for binary classification problems. It is a probability curve that plots the TPR against FPR at various threshold values and essentially separates the ‘signal’ from the ‘noise’. The Area Under the Curve (AUC) is the measure of the ability of a classifier to distinguish between classes and is used as a summary of the ROC curve.
+Next step is to build the models using LGBM (Light Gradient Boosted Machine) and XG boost. For that, we need to tune parameters using RandomizedSearchCV or GridSearchCV.
+
+The performance of the models is measured using AUC-ROC. 
+
+AUC_ROC means The Receiver Operator Characteristic (ROC) curve is an evaluation metric for binary classification problems. It is a probability curve that plots the TPR(True Positive) against FPR (False Positive) at various threshold values and essentially separates the ‘signal’ from the ‘noise’. The Area Under the Curve (AUC) is the measure of the ability of a classifier to distinguish between classes and is used as a summary of the ROC curve.
 
